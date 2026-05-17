@@ -1,7 +1,6 @@
 'use client'
 import { Button, FieldError, Input, Label, ListBox, TextArea, TextField, Select, Card } from "@heroui/react";
 import { redirect } from "next/navigation";
-import { useState } from "react";
 
 const Destination = () => {
 
@@ -17,7 +16,8 @@ const Destination = () => {
         const res = await fetch('http://localhost:5000/destination', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json' // এখানে ':' হবে এবং ডাবল 'p' হবে
+                'content-type': 'application/json'
+                 // এখানে ':' হবে এবং ডাবল 'p' হবে
             },
             body: JSON.stringify(data) // ডাটাকে JSON স্ট্রিং এ কনভার্ট করতে হবে
         });

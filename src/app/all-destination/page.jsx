@@ -1,10 +1,20 @@
+import { auth } from '@/lib/auth';
 import { Button, Card } from '@heroui/react';
+import { headers } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 const AllDestination = async () => {
-    const res = await fetch('http://localhost:5000/destination')
+
+    const { token } = await auth.api.getToken({
+        headers: await headers()
+    })
+    const res = await fetch('http://localhost:5000/destination',{
+        headers:{
+            authorization:`Bearer ${token}`
+        }
+    })
     const data = await res.json()
     console.log(data)
     return (

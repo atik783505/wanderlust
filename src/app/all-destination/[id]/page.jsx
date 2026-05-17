@@ -2,14 +2,26 @@
 import Bokingcard from "@/components/Bokingcard";
 import { Default } from "@/components/Delete";
 import { Updatemodal } from "@/components/Updatemodal";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 import Image from "next/image";
 import { FaArrowRight, FaLocationCrosshairs } from "react-icons/fa6";
 
 
 const destinationDetails = async ({ params }) => {
 
+
+    const {token} = await auth.api.getToken({
+        headers: await headers()
+    })
+    // console.log(token)
+
     const { id } = await params
-    const res = await fetch(`http://localhost:5000/destination/${id}`)
+    const res = await fetch(`http://localhost:5000/destination/${id}`,{
+        headers:{
+            authorization:`Bearer ${token}`
+        }
+    })
     const destination = await res.json()
     console.log(destination)
     console.log('this is new')
@@ -33,9 +45,9 @@ const destinationDetails = async ({ params }) => {
                         <h2 className="font-bold text-[22px] py-2">Highlights</h2>
                         <p>{destination.description}</p>
                     </div>
-                   <div>
-                    <Bokingcard destination={destination}></Bokingcard>
-                   </div>
+                    <div>
+                        <Bokingcard destination={destination}></Bokingcard>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Navber from "@/components/Navber";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   variable: "--font-poppins", // Spelling thik kora hoyeche
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
         <Navber></Navber>
         <main>{children}</main>
         <Footer></Footer>
-        
+        <Toaster />
         </body>
     </html>
   );

@@ -1,11 +1,13 @@
 'use client'
-import { useSession } from '@/lib/auth-client';
+import { authClient, useSession } from '@/lib/auth-client';
 import { Button, Card, FieldError, Input, Label, TextField } from '@heroui/react';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { FaArrowRight } from 'react-icons/fa6';
 
 const Bokingcard = ({ destination }) => {
 
+    
 
     const { data } = useSession()
 
@@ -26,14 +28,18 @@ const Bokingcard = ({ destination }) => {
             iamge:destination.imageUrl
         }
         console.log(bookingData)
+        const {data:tokenData} = await authClient.token()
+        console.log(tokenData)
 
         const res = await fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization:`Bearer ${tokenData.token}`
             },
             body: JSON.stringify(bookingData) // এই লাইনটি যোগ করতে হবে
         });
+        toast.success(`${destination.destinationName} added succefully`)
     }
 
 
