@@ -6,11 +6,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn.pixabay.com',
+        hostname: '**', // Niche eti use korle shob domain allow hoye jabe
       },
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
+        protocol: 'http', // HTTP domain gulanor jonno eti add korte paren (optional)
+        hostname: '**',
       },
     ],
   },
