@@ -38,7 +38,7 @@ export default function Signup() {
                 
                 {/* Header Title */}
                 <div className="text-center space-y-2">
-                    <h2 className="font-black text-3xl text-white">Welcome <span className="text-transparent bg-clip-text bg-gradient-cyan-indigo text-glow-cyan">Back</span></h2>
+                    <h2 className="font-black text-3xl text-white">Welcome Back</h2>
                     <p className="text-xs text-gray-400 font-light">Login to continue your Wanderlust travels</p>
                 </div>
 

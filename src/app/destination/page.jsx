@@ -32,7 +32,7 @@ const Destination = () => {
                 {/* Header Title */}
                 <div className="text-center space-y-2 mb-6">
                     <h1 className="text-3xl sm:text-4xl font-black text-white">
-                        Add <span className="text-transparent bg-clip-text bg-gradient-cyan-indigo text-glow-cyan">Destination</span>
+                        Add Destination
                     </h1>
                     <p className="text-xs text-gray-400 font-light">Share a spectacular new travel location with the community</p>
                 </div>

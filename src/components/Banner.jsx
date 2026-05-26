@@ -12,7 +12,7 @@ const Banner = () => {
       <div className="relative z-10 p-4 max-w-4xl text-center flex justify-center flex-col items-center gap-6 flex-1">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-tight md:leading-none text-glow-cyan">
           Discover Your <br />
-          <span className="text-transparent bg-clip-text bg-gradient-cyan-indigo">Next Adventure</span>
+          <span className="text-glow-cyan">Next Adventure</span>
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl font-light">

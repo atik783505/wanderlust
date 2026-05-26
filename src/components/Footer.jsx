@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="mt-auto border-t border-white/10 bg-slate-950/80 backdrop-blur-md text-gray-400 px-6 md:px-16 py-16">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-cyan-indigo text-glow-cyan">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-glow-cyan">
             Wanderlust
           </h1>
           <p className="mt-4 max-w-xl text-gray-300">

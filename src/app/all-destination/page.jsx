@@ -25,7 +25,7 @@ const AllDestination = async () => {
             {/* Header Description */}
             <div className="mb-12 text-center md:text-left space-y-4">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-white">
-                    Explore Our <span className="text-transparent bg-clip-text bg-gradient-cyan-indigo">Destinations</span>
+                    Explore Our <span >Destinations</span>
                 </h1>
                 <p className="text-gray-400 max-w-2xl text-sm sm:text-base font-light leading-relaxed">
                     Select from our curated list of world-class locations. Click Book Now to plan your dream vacation and start your journey today.

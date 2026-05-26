@@ -52,7 +52,7 @@ const Categories = () => {
                         Categories
                     </span>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
-                        Choose Your <span className="text-transparent bg-clip-text bg-gradient-cyan-indigo text-glow-cyan">Vibe</span>
+                        Choose Your Vibe
                     </h2>
                     <p className="text-gray-400 font-light text-sm sm:text-base leading-relaxed">
                         Filter through our carefully selected categories to locate exactly the adventure your heart desires.
