@@ -7,14 +7,7 @@ import React from 'react';
 import { FaLocationCrosshairs, FaClock, FaArrowRight } from 'react-icons/fa6';
 
 const AllDestination = async () => {
-
-    const { token } = await auth.api.getToken({
-        headers: await headers()
-    })
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/destination`,{
-        headers:{
-            authorization:`Bearer ${token}`
-        }
     })
     const data = await res.json()
     console.log(data)
